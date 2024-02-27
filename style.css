@@ -15,10 +15,11 @@
     max-width: 41em;
     min-height: 25em;
     border-radius: 0.6em;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 100%);
     left: 50%;
     top: 50%;
     display: flex;
+    transition: transform 0.5s ease-in-out; /* Add transition for container */
   }
   
   .testimonial-container {
@@ -74,7 +75,8 @@
   }
 
   .slide-up {
-    transform: translateY(-100%);
+    transform: translateY(10%);
+    opacity: 1;
   }
   
   .testimonial-container h3 {
