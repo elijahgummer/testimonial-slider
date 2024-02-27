@@ -59,7 +59,8 @@
   }
 
   .wrapper:hover button#next {
-    
+    transform: translateX(-2em);
+    display: block;
   }
   
   .testimonial-container p {
