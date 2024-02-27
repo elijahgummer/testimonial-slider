@@ -4,10 +4,11 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
-
+  
   body {
     background-color: #2d3d67;
   }
+  
   .wrapper {
     position: absolute;
     width: 80vw;
@@ -19,6 +20,7 @@
     top: 50%;
     display: flex;
   }
+  
   .testimonial-container {
     width: 85%;
     height: 100%;
@@ -26,6 +28,7 @@
     margin: auto;
     padding: 1.8em 1.2em;
   }
+  
   .wrapper button {
     font-size: 1.8em;
     height: 2.2em;
@@ -39,13 +42,26 @@
     background: none;
     cursor: pointer;
     border-radius: 50%;
+    transition: all ease-in-out 0.5s, display 0s 0.5s; /* Delaying display transition */
   }
+  
   button#next {
-    right: -1.1em;
+    right: -2.5em;
   }
+  
   button#prev {
-    left: -1.1em;
+    left: -2.5em;
   }
+  
+  .wrapper:hover button#prev {
+    transform: translateX(2em);
+    display: block;
+  }
+
+  .wrapper:hover button#next {
+    
+  }
+  
   .testimonial-container p {
     color: #FFFFFF;
     text-align: center;
@@ -59,6 +75,7 @@
     font-size: 1em;
     text-align: center;
   }
+  
   .testimonial-container h6 {
     color: #bcc4da;
     font-size: 0.9em;
@@ -66,8 +83,10 @@
     font-weight: 400;
     text-align: center;
   }
+  
   @media screen and (max-width: 650px) {
     .wrapper {
       font-size: 14px;
     }
   }
+  
