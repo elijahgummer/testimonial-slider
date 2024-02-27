@@ -8,7 +8,6 @@
     background-color: #0a69ed;
   }
   .wrapper {
-    background-color: #ffffff;
     position: absolute;
     width: 80vw;
     max-width: 41em;
@@ -17,7 +16,6 @@
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
     display: flex;
   }
   .testimonial-container {
@@ -31,13 +29,12 @@
     font-size: 1.8em;
     height: 2.2em;
     width: 2.2em;
-    background-color: #ffffff;
     position: absolute;
     margin: auto;
     top: 0;
     bottom: 0;
     border: none;
-    color: #0a69ed;
+    color: #ffffff;
     box-shadow: 0 0 1em rgba(1, 17, 39, 0.25);
     cursor: pointer;
     border-radius: 50%;
