@@ -41,6 +41,7 @@
     color: #dedede;
     background: none;
     cursor: pointer;
+    opacity: 0;
     border-radius: 50%;
     transition: all ease-in-out 0.5s, display 0s 0.5s; /* Delaying display transition */
   }
@@ -55,12 +56,12 @@
   
   .wrapper:hover button#prev {
     transform: translateX(1.2em);
-    display: block;
+    opacity: 1;
   }
 
   .wrapper:hover button#next {
     transform: translateX(-1.2em);
-    display: block;
+    opacity: 1;
   }
   
   .testimonial-container p {
