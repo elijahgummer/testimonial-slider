@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
+
+  body {
+    background-color: #2d3d67;
+  }
   .wrapper {
     position: absolute;
     width: 80vw;
