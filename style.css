@@ -70,6 +70,11 @@
     font-size: 0.9em;
     line-height: 2em;
     letter-spacing: 0.05em;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide-up {
+    transform: translateY(-100%);
   }
   
   .testimonial-container h3 {
