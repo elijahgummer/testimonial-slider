@@ -38,10 +38,12 @@ const testimonials = [
   nextBtn.addEventListener("click", () => {
     i = (j + i + 1) % j;
     displayTestimonial();
+    testimonialContainer.classList.add("slide-up");
   });
   prevBtn.addEventListener("click", () => {
     i = (j + i - 1) % j;
     displayTestimonial();
+    testimonialContainer.classList.add("slide-up");
   });
   
   let displayTestimonial = () => {
