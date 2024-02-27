@@ -4,9 +4,6 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   }
-  body {
-    background-color: #0a69ed;
-  }
   .wrapper {
     position: absolute;
     width: 80vw;
@@ -34,7 +31,8 @@
     top: 0;
     bottom: 0;
     border: none;
-    color: #ffffff;
+    color: #dedede;
+    background: none;
     cursor: pointer;
     border-radius: 50%;
   }
@@ -45,7 +43,7 @@
     left: -1.1em;
   }
   .testimonial-container p {
-    color: #8c8c90;
+    color: #FFFFFF;
     text-align: center;
     font-size: 0.9em;
     line-height: 2em;
