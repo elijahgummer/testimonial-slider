@@ -39,28 +39,17 @@ document.addEventListener("DOMContentLoaded", function() {
   nextBtn.addEventListener("click", () => {
     i = (j + i + 1) % j;
     displayTestimonial();
-    testimonialContainer.classList.add("slide-up"); // Add slide-up class
+    testimonialContainer.classList.remove("slide-up");
+    void testimonialContainer.offsetWidth; // Trigger reflow
+    testimonialContainer.classList.add("slide-up");
   });
 
   prevBtn.addEventListener("click", () => {
-    // Set opacity of text elements to zero
-    testimonialContainer.querySelectorAll("p, h3, h6").forEach(function(element) {
-      element.style.opacity = 0;
-    });
-
-    // Wait for a couple of seconds before displaying the previous testimonial
-    setTimeout(() => {
-      i = (j + i - 1) % j;
-      displayTestimonial();
-
-      // Restore opacity after a couple of seconds
-      setTimeout(() => {
-        testimonialContainer.querySelectorAll("p, h3, h6").forEach(function(element) {
-          element.style.opacity = 1;
-        });
-      }, 500); // Adjust the delay time as needed (500 milliseconds = 0.5 seconds)
-
-    }, 500); // Adjust the delay time as needed (500 milliseconds = 0.5 seconds)
+    i = (j + i - 1) % j;
+    displayTestimonial();
+    testimonialContainer.classList.remove("slide-up");
+    void testimonialContainer.offsetWidth; // Trigger reflow
+    testimonialContainer.classList.add("slide-up");
   });
 
   let displayTestimonial = () => {

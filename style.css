@@ -28,6 +28,7 @@
     position: relative;
     margin: auto;
     padding: 1.8em 1.2em;
+    transition: bottom 0.5s ease-in-out; /* Add transition for slide-up effect */
   }
   
   .wrapper button {
@@ -76,8 +77,8 @@
   }
 
   .slide-up {
-    transform: translateY(10%);
     opacity: 1;
+    animation: moveup 0.9s linear forwards;
   }
   
   .testimonial-container h3 {
@@ -99,6 +100,15 @@
   @media screen and (max-width: 650px) {
     .wrapper {
       font-size: 14px;
+    }
+  }
+
+  @keyframes moveup {
+    0%{
+      margin-top: 25px;
+    }
+    100%{
+      margin-top: 0px;
     }
   }
   
