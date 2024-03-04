@@ -1,116 +1,111 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  body {
-    background-color: #2d3d67;
-  }
-  
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #2d3d67;
+}
+
+.wrapper {
+  position: absolute;
+  width: 80vw;
+  max-width: 41em;
+  min-height: 25em;
+  border-radius: 0.6em;
+  transform: translate(-50%, 100%);
+  left: 50%;
+  top: 50%;
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Add transition for container */
+}
+
+.testimonial-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  padding: 1.8em 1.2em;
+  transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Add transitions */
+}
+
+.wrapper button {
+  font-size: 1.8em;
+  height: 2.2em;
+  width: 2.2em;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  border: none;
+  color: #dedede;
+  background: none;
+  cursor: pointer;
+  opacity: 0;
+  border-radius: 50%;
+  transition: all ease-in-out 0.5s, display 0s 0.5s; /* Delaying display transition */
+}
+
+button#next {
+  right: -2.5em;
+}
+
+button#prev {
+  left: -2.5em;
+}
+
+.wrapper:hover button#prev {
+  transform: translateX(1.2em);
+  opacity: 1;
+}
+
+.wrapper:hover button#next {
+  transform: translateX(-1.2em);
+  opacity: 1;
+}
+
+.testimonial-container p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.9em;
+  line-height: 2em;
+  letter-spacing: 0.05em;
+}
+
+.slide-up {
+  opacity: 1;
+  animation: moveup 0.9s linear forwards;
+}
+
+.testimonial-container h3 {
+  color: #2d3d67;
+  font-size: 1em;
+  text-align: center;
+}
+
+.testimonial-container h6 {
+  color: #bcc4da;
+  font-size: 0.9em;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
   .wrapper {
-    position: absolute;
-    width: 80vw;
-    max-width: 41em;
-    min-height: 25em;
-    border-radius: 0.6em;
-    transform: translate(-50%, 100%);
-    left: 50%;
-    top: 50%;
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Add transition for container */
+    font-size: 14px;
   }
-  
-  .testimonial-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin: auto;
-    padding: 1.8em 1.2em;
-    transition: bottom 0.5s ease-in-out; /* Add transition for slide-up effect */
-  }
-  
-  .wrapper button {
-    font-size: 1.8em;
-    height: 2.2em;
-    width: 2.2em;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    border: none;
-    color: #dedede;
-    background: none;
-    cursor: pointer;
+}
+
+@keyframes moveup {
+  0% {
+    margin-top: 30%;
     opacity: 0;
-    border-radius: 50%;
-    transition: all ease-in-out 0.5s, display 0s 0.5s; /* Delaying display transition */
   }
-  
-  button#next {
-    right: -2.5em;
-  }
-  
-  button#prev {
-    left: -2.5em;
-  }
-  
-  .wrapper:hover button#prev {
-    transform: translateX(1.2em);
+  100% {
+    margin-top: 20%;
     opacity: 1;
   }
-
-  .wrapper:hover button#next {
-    transform: translateX(-1.2em);
-    opacity: 1;
-  }
-  
-  .testimonial-container p {
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 0.9em;
-    line-height: 2em;
-    letter-spacing: 0.05em;
-    transition: transform 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
-  }
-
-  .slide-up {
-    opacity: 1;
-    animation: moveup 0.9s linear forwards;
-  }
-  
-  .testimonial-container h3 {
-    color: #2d3d67;
-    font-size: 1em;
-    text-align: center;
-    transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
-  }
-  
-  .testimonial-container h6 {
-    color: #bcc4da;
-    font-size: 0.9em;
-    letter-spacing: 0.03em;
-    font-weight: 400;
-    text-align: center;
-    transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
-  }
-  
-  @media screen and (max-width: 650px) {
-    .wrapper {
-      font-size: 14px;
-    }
-  }
-
-  @keyframes moveup {
-    0%{
-      margin-top: 30%;
-      opacity: 0;
-    }
-    100%{
-      margin-top: 20%;
-      opacity: 1;
-    }
-  }
-  
+}
